@@ -1,0 +1,484 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1016A07613371F3900A83C2B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1016A07513371F3900A83C2B /* UIKit.framework */; };
+		1016A07813371F3900A83C2B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1016A07713371F3900A83C2B /* Foundation.framework */; };
+		1016A07A13371F3900A83C2B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1016A07913371F3900A83C2B /* CoreGraphics.framework */; };
+		1016A08013371F3900A83C2B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1016A07E13371F3900A83C2B /* InfoPlist.strings */; };
+		1016A08313371F3900A83C2B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1016A08213371F3900A83C2B /* main.m */; };
+		1016A08613371F3900A83C2B /* MatrunAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1016A08513371F3900A83C2B /* MatrunAppDelegate.m */; };
+		1016A08913371F3900A83C2B /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1016A08713371F3900A83C2B /* MainWindow.xib */; };
+		1016A08C13371F3900A83C2B /* AdditionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1016A08B13371F3900A83C2B /* AdditionViewController.m */; };
+		102BFE00135E73CF00C14EF6 /* math_app_icon_57_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 102BFDFF135E73CF00C14EF6 /* math_app_icon_57_default.png */; };
+		102BFE02135E73E400C14EF6 /* math_app_icon_114@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 102BFE01135E73E400C14EF6 /* math_app_icon_114@2x.png */; };
+		1057C006135E9F64006B3E66 /* line.png in Resources */ = {isa = PBXBuildFile; fileRef = 1057C005135E9F64006B3E66 /* line.png */; };
+		1057C008135EA07F006B3E66 /* line@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1057C007135EA07F006B3E66 /* line@2x.png */; };
+		1069D2EF13613FE400F4B538 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 1069D2EE13613FE400F4B538 /* Default.png */; };
+		1069D2F113613FED00F4B538 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1069D2F013613FED00F4B538 /* Default@2x.png */; };
+		107E6788134930ED008313CF /* Eraser.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 107E6787134930ED008313CF /* Eraser.ttf */; };
+		108FC67F1346B43000737941 /* Digits.m in Sources */ = {isa = PBXBuildFile; fileRef = 108FC67E1346B43000737941 /* Digits.m */; };
+		10923E101343164200A55D04 /* NSArrayHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 10923E0F1343164200A55D04 /* NSArrayHelpers.m */; };
+		1092E7CF13518CA0004BC6D9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1092E7CE13518CA0004BC6D9 /* AudioToolbox.framework */; };
+		109A2FF013387CAB009DAC24 /* AdditionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 109A2FEF13387CAB009DAC24 /* AdditionView.xib */; };
+		109AF1B81356AD570034646D /* SettingsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 109AF1B71356AD570034646D /* SettingsView.xib */; };
+		10AE3B521352354500B0A9CA /* StatsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10AE3B511352354500B0A9CA /* StatsView.xib */; };
+		10AE3B551352A80300B0A9CA /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10AE3B541352A80300B0A9CA /* StatsViewController.m */; };
+		10B1076013443FF60060E82D /* MathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B1075F13443FF60060E82D /* MathViewController.m */; };
+		10B10763134440DB0060E82D /* SubtractionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B10762134440DB0060E82D /* SubtractionView.xib */; };
+		10B10765134440F00060E82D /* MultiplicationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 10B10764134440F00060E82D /* MultiplicationView.xib */; };
+		10B1076A134442730060E82D /* SubtractionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B10769134442730060E82D /* SubtractionViewController.m */; };
+		10B1076D1344428F0060E82D /* MultiplicationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 10B1076C1344428F0060E82D /* MultiplicationViewController.m */; };
+		10D54809135C063100D9AB1D /* plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D54807135C063100D9AB1D /* plus.png */; };
+		10D5480A135C063100D9AB1D /* plus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D54808135C063100D9AB1D /* plus@2x.png */; };
+		10D5480E135C069700D9AB1D /* minus.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D5480C135C069700D9AB1D /* minus.png */; };
+		10D5480F135C069700D9AB1D /* minus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D5480D135C069700D9AB1D /* minus@2x.png */; };
+		10D54812135C073300D9AB1D /* into.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D54810135C073300D9AB1D /* into.png */; };
+		10D54813135C073300D9AB1D /* into@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D54811135C073300D9AB1D /* into@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		1016A07113371F3900A83C2B /* Matrun.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Matrun.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1016A07513371F3900A83C2B /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		1016A07713371F3900A83C2B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		1016A07913371F3900A83C2B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		1016A07D13371F3900A83C2B /* Matrun-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Matrun-Info.plist"; sourceTree = "<group>"; };
+		1016A07F13371F3900A83C2B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		1016A08113371F3900A83C2B /* Matrun-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Matrun-Prefix.pch"; sourceTree = "<group>"; };
+		1016A08213371F3900A83C2B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1016A08413371F3900A83C2B /* MatrunAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatrunAppDelegate.h; sourceTree = "<group>"; };
+		1016A08513371F3900A83C2B /* MatrunAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatrunAppDelegate.m; sourceTree = "<group>"; };
+		1016A08813371F3900A83C2B /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		1016A08A13371F3900A83C2B /* AdditionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AdditionViewController.h; sourceTree = "<group>"; };
+		1016A08B13371F3900A83C2B /* AdditionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AdditionViewController.m; sourceTree = "<group>"; };
+		102BFDFF135E73CF00C14EF6 /* math_app_icon_57_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = math_app_icon_57_default.png; sourceTree = "<group>"; };
+		102BFE01135E73E400C14EF6 /* math_app_icon_114@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "math_app_icon_114@2x.png"; sourceTree = "<group>"; };
+		1057C005135E9F64006B3E66 /* line.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = line.png; sourceTree = "<group>"; };
+		1057C007135EA07F006B3E66 /* line@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "line@2x.png"; sourceTree = "<group>"; };
+		1069D2EE13613FE400F4B538 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		1069D2F013613FED00F4B538 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		107E6787134930ED008313CF /* Eraser.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Eraser.ttf; sourceTree = "<group>"; };
+		108FC67D1346B43000737941 /* Digits.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Digits.h; sourceTree = "<group>"; };
+		108FC67E1346B43000737941 /* Digits.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Digits.m; sourceTree = "<group>"; };
+		10923E0E1343164200A55D04 /* NSArrayHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSArrayHelpers.h; sourceTree = "<group>"; };
+		10923E0F1343164200A55D04 /* NSArrayHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSArrayHelpers.m; sourceTree = "<group>"; };
+		1092E7CE13518CA0004BC6D9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		109A2FEF13387CAB009DAC24 /* AdditionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdditionView.xib; sourceTree = "<group>"; };
+		109AF1B71356AD570034646D /* SettingsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsView.xib; sourceTree = "<group>"; };
+		10AD37EB135A490700DD484F /* StatsResetDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsResetDelegate.h; sourceTree = "<group>"; };
+		10AE3B511352354500B0A9CA /* StatsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StatsView.xib; sourceTree = "<group>"; };
+		10AE3B531352A80300B0A9CA /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StatsViewController.h; sourceTree = "<group>"; };
+		10AE3B541352A80300B0A9CA /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StatsViewController.m; sourceTree = "<group>"; };
+		10B1075E13443FF60060E82D /* MathViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MathViewController.h; sourceTree = "<group>"; };
+		10B1075F13443FF60060E82D /* MathViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MathViewController.m; sourceTree = "<group>"; };
+		10B10762134440DB0060E82D /* SubtractionView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SubtractionView.xib; sourceTree = "<group>"; };
+		10B10764134440F00060E82D /* MultiplicationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiplicationView.xib; sourceTree = "<group>"; };
+		10B10768134442720060E82D /* SubtractionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubtractionViewController.h; sourceTree = "<group>"; };
+		10B10769134442730060E82D /* SubtractionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubtractionViewController.m; sourceTree = "<group>"; };
+		10B1076B1344428F0060E82D /* MultiplicationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiplicationViewController.h; sourceTree = "<group>"; };
+		10B1076C1344428F0060E82D /* MultiplicationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiplicationViewController.m; sourceTree = "<group>"; };
+		10D54807135C063100D9AB1D /* plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = plus.png; sourceTree = "<group>"; };
+		10D54808135C063100D9AB1D /* plus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plus@2x.png"; sourceTree = "<group>"; };
+		10D5480C135C069700D9AB1D /* minus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minus.png; sourceTree = "<group>"; };
+		10D5480D135C069700D9AB1D /* minus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "minus@2x.png"; sourceTree = "<group>"; };
+		10D54810135C073300D9AB1D /* into.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = into.png; sourceTree = "<group>"; };
+		10D54811135C073300D9AB1D /* into@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "into@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1016A06E13371F3900A83C2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1092E7CF13518CA0004BC6D9 /* AudioToolbox.framework in Frameworks */,
+				1016A07613371F3900A83C2B /* UIKit.framework in Frameworks */,
+				1016A07813371F3900A83C2B /* Foundation.framework in Frameworks */,
+				1016A07A13371F3900A83C2B /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1016A06613371F3900A83C2B = {
+			isa = PBXGroup;
+			children = (
+				1069D2F013613FED00F4B538 /* Default@2x.png */,
+				1069D2EE13613FE400F4B538 /* Default.png */,
+				102BFE01135E73E400C14EF6 /* math_app_icon_114@2x.png */,
+				102BFDFF135E73CF00C14EF6 /* math_app_icon_57_default.png */,
+				1016A07B13371F3900A83C2B /* Matrun */,
+				1016A07413371F3900A83C2B /* Frameworks */,
+				1016A07213371F3900A83C2B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1016A07213371F3900A83C2B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1016A07113371F3900A83C2B /* Matrun.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1016A07413371F3900A83C2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1092E7CE13518CA0004BC6D9 /* AudioToolbox.framework */,
+				1016A07513371F3900A83C2B /* UIKit.framework */,
+				1016A07713371F3900A83C2B /* Foundation.framework */,
+				1016A07913371F3900A83C2B /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1016A07B13371F3900A83C2B /* Matrun */ = {
+			isa = PBXGroup;
+			children = (
+				109FBBE413459471009A1863 /* Classes */,
+				109FBBE5134594AF009A1863 /* Resources */,
+				1016A08413371F3900A83C2B /* MatrunAppDelegate.h */,
+				1016A08513371F3900A83C2B /* MatrunAppDelegate.m */,
+				109FBBE6134594E9009A1863 /* Nib */,
+				1016A07C13371F3900A83C2B /* Supporting Files */,
+				10923E0E1343164200A55D04 /* NSArrayHelpers.h */,
+				10923E0F1343164200A55D04 /* NSArrayHelpers.m */,
+			);
+			path = Matrun;
+			sourceTree = "<group>";
+		};
+		1016A07C13371F3900A83C2B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1016A07D13371F3900A83C2B /* Matrun-Info.plist */,
+				1016A07E13371F3900A83C2B /* InfoPlist.strings */,
+				1016A08113371F3900A83C2B /* Matrun-Prefix.pch */,
+				1016A08213371F3900A83C2B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		109FBBE413459471009A1863 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1016A08A13371F3900A83C2B /* AdditionViewController.h */,
+				10B1075E13443FF60060E82D /* MathViewController.h */,
+				10B1075F13443FF60060E82D /* MathViewController.m */,
+				1016A08B13371F3900A83C2B /* AdditionViewController.m */,
+				10B10768134442720060E82D /* SubtractionViewController.h */,
+				10B1076B1344428F0060E82D /* MultiplicationViewController.h */,
+				10B1076C1344428F0060E82D /* MultiplicationViewController.m */,
+				10B10769134442730060E82D /* SubtractionViewController.m */,
+				108FC67D1346B43000737941 /* Digits.h */,
+				108FC67E1346B43000737941 /* Digits.m */,
+				10AE3B531352A80300B0A9CA /* StatsViewController.h */,
+				10AE3B541352A80300B0A9CA /* StatsViewController.m */,
+				10AD37EB135A490700DD484F /* StatsResetDelegate.h */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		109FBBE5134594AF009A1863 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1057C007135EA07F006B3E66 /* line@2x.png */,
+				1057C005135E9F64006B3E66 /* line.png */,
+				10D54810135C073300D9AB1D /* into.png */,
+				10D54811135C073300D9AB1D /* into@2x.png */,
+				10D5480C135C069700D9AB1D /* minus.png */,
+				10D5480D135C069700D9AB1D /* minus@2x.png */,
+				10D54807135C063100D9AB1D /* plus.png */,
+				10D54808135C063100D9AB1D /* plus@2x.png */,
+				107E6787134930ED008313CF /* Eraser.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		109FBBE6134594E9009A1863 /* Nib */ = {
+			isa = PBXGroup;
+			children = (
+				10AE3B511352354500B0A9CA /* StatsView.xib */,
+				1016A08713371F3900A83C2B /* MainWindow.xib */,
+				109A2FEF13387CAB009DAC24 /* AdditionView.xib */,
+				10B10762134440DB0060E82D /* SubtractionView.xib */,
+				10B10764134440F00060E82D /* MultiplicationView.xib */,
+				109AF1B71356AD570034646D /* SettingsView.xib */,
+			);
+			name = Nib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1016A07013371F3900A83C2B /* Matrun */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1016A09813371F3900A83C2B /* Build configuration list for PBXNativeTarget "Matrun" */;
+			buildPhases = (
+				1016A06D13371F3900A83C2B /* Sources */,
+				1016A06E13371F3900A83C2B /* Frameworks */,
+				1016A06F13371F3900A83C2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Matrun;
+			productName = Matrun;
+			productReference = 1016A07113371F3900A83C2B /* Matrun.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1016A06813371F3900A83C2B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = "Sunil Sayala";
+			};
+			buildConfigurationList = 1016A06B13371F3900A83C2B /* Build configuration list for PBXProject "Matrun" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1016A06613371F3900A83C2B;
+			productRefGroup = 1016A07213371F3900A83C2B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1016A07013371F3900A83C2B /* Matrun */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1016A06F13371F3900A83C2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1016A08013371F3900A83C2B /* InfoPlist.strings in Resources */,
+				1016A08913371F3900A83C2B /* MainWindow.xib in Resources */,
+				109A2FF013387CAB009DAC24 /* AdditionView.xib in Resources */,
+				10B10763134440DB0060E82D /* SubtractionView.xib in Resources */,
+				10B10765134440F00060E82D /* MultiplicationView.xib in Resources */,
+				107E6788134930ED008313CF /* Eraser.ttf in Resources */,
+				10AE3B521352354500B0A9CA /* StatsView.xib in Resources */,
+				109AF1B81356AD570034646D /* SettingsView.xib in Resources */,
+				10D54809135C063100D9AB1D /* plus.png in Resources */,
+				10D5480A135C063100D9AB1D /* plus@2x.png in Resources */,
+				10D5480E135C069700D9AB1D /* minus.png in Resources */,
+				10D5480F135C069700D9AB1D /* minus@2x.png in Resources */,
+				10D54812135C073300D9AB1D /* into.png in Resources */,
+				10D54813135C073300D9AB1D /* into@2x.png in Resources */,
+				102BFE00135E73CF00C14EF6 /* math_app_icon_57_default.png in Resources */,
+				102BFE02135E73E400C14EF6 /* math_app_icon_114@2x.png in Resources */,
+				1057C006135E9F64006B3E66 /* line.png in Resources */,
+				1057C008135EA07F006B3E66 /* line@2x.png in Resources */,
+				1069D2EF13613FE400F4B538 /* Default.png in Resources */,
+				1069D2F113613FED00F4B538 /* Default@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1016A06D13371F3900A83C2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1016A08313371F3900A83C2B /* main.m in Sources */,
+				1016A08613371F3900A83C2B /* MatrunAppDelegate.m in Sources */,
+				1016A08C13371F3900A83C2B /* AdditionViewController.m in Sources */,
+				10923E101343164200A55D04 /* NSArrayHelpers.m in Sources */,
+				10B1076013443FF60060E82D /* MathViewController.m in Sources */,
+				10B1076A134442730060E82D /* SubtractionViewController.m in Sources */,
+				10B1076D1344428F0060E82D /* MultiplicationViewController.m in Sources */,
+				108FC67F1346B43000737941 /* Digits.m in Sources */,
+				10AE3B551352A80300B0A9CA /* StatsViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		1016A07E13371F3900A83C2B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1016A07F13371F3900A83C2B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		1016A08713371F3900A83C2B /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1016A08813371F3900A83C2B /* en */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1016A09613371F3900A83C2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		1016A09713371F3900A83C2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+			};
+			name = Release;
+		};
+		1016A09913371F3900A83C2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Matrun/Matrun-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "Matrun/Matrun-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		1016A09A13371F3900A83C2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Matrun/Matrun-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "Matrun/Matrun-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		1030C188133C59C000A64707 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sunil Sayala";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D2185F5B-8218-45A9-88D7-8A59634D16E0";
+				SDKROOT = iphoneos;
+			};
+			name = Distribution;
+		};
+		1030C189133C59C000A64707 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Matrun/Matrun-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "Matrun/Matrun-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Distribution;
+		};
+		106E255B135AADB1007BA1C7 /* Ad-Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sunil Sayala";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "6A9B68F6-00B6-4B2D-96D6-17F0F5FB327F";
+				SDKROOT = iphoneos;
+			};
+			name = "Ad-Hoc";
+		};
+		106E255C135AADB1007BA1C7 /* Ad-Hoc */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Matrun/Matrun-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "Matrun/Matrun-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				VALIDATE_PRODUCT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = "Ad-Hoc";
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1016A06B13371F3900A83C2B /* Build configuration list for PBXProject "Matrun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1016A09613371F3900A83C2B /* Debug */,
+				1016A09713371F3900A83C2B /* Release */,
+				106E255B135AADB1007BA1C7 /* Ad-Hoc */,
+				1030C188133C59C000A64707 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1016A09813371F3900A83C2B /* Build configuration list for PBXNativeTarget "Matrun" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1016A09913371F3900A83C2B /* Debug */,
+				1016A09A13371F3900A83C2B /* Release */,
+				106E255C135AADB1007BA1C7 /* Ad-Hoc */,
+				1030C189133C59C000A64707 /* Distribution */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 1016A06813371F3900A83C2B /* Project object */;
+}
