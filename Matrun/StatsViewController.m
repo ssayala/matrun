@@ -65,13 +65,13 @@
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     UIBarButtonItem *done = [[UIBarButtonItem alloc] 
                              initWithTitle:@" Done "
-                             style: UIBarButtonItemStyleDone
+                             style: UIBarButtonItemStylePlain
                              target:self 
                              action:@selector(dismissAction)];
    
     UIBarButtonItem *reset = [[UIBarButtonItem alloc] 
                               initWithTitle:@" Reset " 
-                              style: UIBarButtonItemStyleDone
+                              style: UIBarButtonItemStylePlain
                               target:self 
                               action:@selector(resetScores)];
     
@@ -94,7 +94,6 @@
     [keys release];
     [information release];
     [table release];
-    [sectionTitle release];
     [delegate release];
 }
 #pragma mark -
