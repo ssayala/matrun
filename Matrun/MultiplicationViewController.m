@@ -30,6 +30,10 @@
     return @"Multiplication";
 }
 
+-(NSString *)getOperationSymbol {
+    return @"x";
+}
+
 -(void)viewDidLoad {
     topHigher = NO;
     [super viewDidLoad];

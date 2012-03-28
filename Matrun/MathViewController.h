@@ -51,5 +51,6 @@
 -(void)highlightWrongAnswer:(UILabel *)answer;
 -(void)initLabels;
 -(NSString*)getOperationTitle;
+-(NSString*)getOperationSymbol;
 
 @end

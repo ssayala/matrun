@@ -27,6 +27,10 @@
     return @"Addition";
 }
 
+-(NSString *)getOperationSymbol {
+    return @"+";
+}
+
 -(void)viewDidLoad {
     topHigher = NO;
     [super viewDidLoad];

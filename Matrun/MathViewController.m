@@ -39,6 +39,10 @@
     return @"Math";
 }
 
+-(NSString *)getOperationSymbol {
+    return @"";
+}
+
 -(NSInteger)doOperation:(NSInteger)topNumber bottomNumber:(NSInteger)bottom {
     return 0;
 }
@@ -126,7 +130,7 @@
     
     NSInteger correctAnswer = [self doOperation:digits.top bottomNumber:digits.bottom];
     topLabel.text = [NSString stringWithFormat:@"%d", digits.top];
-    bottomLabel.text = [NSString stringWithFormat:@"%d", digits.bottom];
+    bottomLabel.text = [NSString stringWithFormat:@"%@ %d", [self getOperationSymbol],digits.bottom];
     answerA.text = [NSString stringWithFormat:@"%d", correctAnswer];
     [digits release];
 

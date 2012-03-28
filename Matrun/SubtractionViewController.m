@@ -29,6 +29,10 @@
     return @"Subtraction";
 }
 
+-(NSString *)getOperationSymbol {
+    return @"-";
+}
+
 -(void)viewDidLoad {
     topHigher = YES;
     [super viewDidLoad];
