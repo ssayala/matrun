@@ -25,6 +25,10 @@
 
 #define kMinimumGestureLength    25
 #define kMaximumVariance         5
+#define labelWidth_Easy          87
+#define labelPosX_Easy           97
+#define labelWidth_Hard          140
+#define labelPosX_Hard           48
 
 @implementation MathViewController
 @synthesize topLabel;
@@ -34,6 +38,7 @@
 @synthesize answerB;
 @synthesize answerC;
 @synthesize answerD;
+@synthesize difficultySetting;
 
 -(NSString *)getOperationTitle {
     return @"Math";
@@ -50,12 +55,12 @@
 -(NSInteger)getNextWrongAnswer:(NSInteger)count,... {
     Digits *digits; 
     if (topHigher) {
-        digits = [[Digits alloc] initWithTopHigher];
+        digits = [[Digits alloc] initWithTopHigher:difficultySetting];
     }
     else {
-        digits = [[Digits alloc] init];
-        
-    }    
+        digits = [[Digits alloc] init:difficultySetting];        
+    }
+    
     BOOL repeated = NO;
     NSInteger value;
     NSInteger operated;
@@ -103,6 +108,7 @@
     [statsController setTotalCount:problemCount];
     [statsController setWrongAttemptCount:wrongAttemptCount];
     [statsController setCorrectAttemptCount:correctAnswerCount];
+    [statsController setDifficulty:difficultySetting];
     statsController.sectionTitle = [self getOperationTitle];
     statsController.delegate = self;
    
@@ -121,11 +127,10 @@
  
     Digits *digits; 
     if (topHigher) {
-        digits = [[Digits alloc] initWithTopHigher];
+        digits = [[Digits alloc] initWithTopHigher:difficultySetting];
     }
     else {
-        digits = [[Digits alloc] init];
-
+        digits = [[Digits alloc] init:difficultySetting];
     }
     
     NSInteger correctAnswer = [self doOperation:digits.top bottomNumber:digits.bottom];
@@ -150,7 +155,21 @@
     answerB.frame = [[frames objectAtIndex:1] CGRectValue];
     answerC.frame = [[frames objectAtIndex:2] CGRectValue];
     answerD.frame = [[frames objectAtIndex:3] CGRectValue];
+    
+    [self setLabelStyle:topLabel];
+    [self setLabelStyle:bottomLabel];
+    [self setLabelStyle:answerA];
+    [self setLabelStyle:answerB];
+    [self setLabelStyle:answerC];
+    [self setLabelStyle:answerD];
+}
 
+-(void)setLabelStyle:(UILabel*)label{
+    CGRect newFrame = label.frame;
+    newFrame.size.width = (difficultySetting == EASY) ? labelWidth_Easy : labelWidth_Hard;
+    newFrame.origin.x = (difficultySetting == EASY) ? labelPosX_Easy : labelPosX_Hard;
+    
+    label.frame = newFrame;
 }
 
 - (void)viewDidLoad
@@ -167,8 +186,8 @@
     wrongAttemptCount = 0;
     problemCount = 0;
     wrongAnswerSelected = NO;
+    difficultySetting = EASY;
     [self setNumbers];
-    
 }
 
 - (UIFont *)getFont:(NSString *)fontName fontSize:(CGFloat)size {
@@ -287,6 +306,14 @@
     if ([controller resetStatsPressed] == YES) {
         [self resetStats];
     }
+    
+    if([controller diffSegmentIndex] == 1){
+        difficultySetting = HARD;
+    } else {
+        difficultySetting = EASY;
+    }
+    
+    [self setNumbers];
     [self dismissModalViewControllerAnimated:YES];
 
 }

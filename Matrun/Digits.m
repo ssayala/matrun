@@ -23,9 +23,11 @@
 @implementation Digits
 @synthesize top;
 @synthesize bottom;
-- (void) reset {
-    top = (random() % 10);
-    bottom = (random() % 10);
+@synthesize difficulty;
+
+- (void) reset{
+    top = (random() % difficulty);
+    bottom = (random() % difficulty);
     if (topHigher == YES) {
         if (top < bottom) {
             int temp = top;
@@ -34,8 +36,9 @@
         }
     }
 }
-- (id) init {
+- (id) init:(NSInteger)setting{
     if (self == [super init]) {
+        [self setDifficulty:setting];
         srandom(time(NULL));
         top = 0;
         bottom = 0;
@@ -44,8 +47,9 @@
     }
     return self;
 }
-- (id) initWithTopHigher {
+- (id) initWithTopHigher:(NSInteger)setting{
     if (self == [super init]) {
+        [self setDifficulty:setting];
         srandom(time(NULL));
         top = 0;
         bottom = 0;

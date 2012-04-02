@@ -40,6 +40,7 @@
 		10D5480F135C069700D9AB1D /* minus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D5480D135C069700D9AB1D /* minus@2x.png */; };
 		10D54812135C073300D9AB1D /* into.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D54810135C073300D9AB1D /* into.png */; };
 		10D54813135C073300D9AB1D /* into@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 10D54811135C073300D9AB1D /* into@2x.png */; };
+		887E6F5415253C81004DACFD /* DifficultyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 887E6F5315253C81004DACFD /* DifficultyCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,8 @@
 		10D5480D135C069700D9AB1D /* minus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "minus@2x.png"; sourceTree = "<group>"; };
 		10D54810135C073300D9AB1D /* into.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = into.png; sourceTree = "<group>"; };
 		10D54811135C073300D9AB1D /* into@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "into@2x.png"; sourceTree = "<group>"; };
+		887E6F5215253C81004DACFD /* DifficultyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DifficultyCell.h; sourceTree = "<group>"; };
+		887E6F5315253C81004DACFD /* DifficultyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DifficultyCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,18 +170,20 @@
 			isa = PBXGroup;
 			children = (
 				1016A08A13371F3900A83C2B /* AdditionViewController.h */,
+				1016A08B13371F3900A83C2B /* AdditionViewController.m */,
 				10B1075E13443FF60060E82D /* MathViewController.h */,
 				10B1075F13443FF60060E82D /* MathViewController.m */,
-				1016A08B13371F3900A83C2B /* AdditionViewController.m */,
-				10B10768134442720060E82D /* SubtractionViewController.h */,
 				10B1076B1344428F0060E82D /* MultiplicationViewController.h */,
 				10B1076C1344428F0060E82D /* MultiplicationViewController.m */,
+				10B10768134442720060E82D /* SubtractionViewController.h */,
 				10B10769134442730060E82D /* SubtractionViewController.m */,
 				108FC67D1346B43000737941 /* Digits.h */,
 				108FC67E1346B43000737941 /* Digits.m */,
 				10AE3B531352A80300B0A9CA /* StatsViewController.h */,
 				10AE3B541352A80300B0A9CA /* StatsViewController.m */,
 				10AD37EB135A490700DD484F /* StatsResetDelegate.h */,
+				887E6F5215253C81004DACFD /* DifficultyCell.h */,
+				887E6F5315253C81004DACFD /* DifficultyCell.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -302,6 +307,7 @@
 				10B1076D1344428F0060E82D /* MultiplicationViewController.m in Sources */,
 				108FC67F1346B43000737941 /* Digits.m in Sources */,
 				10AE3B551352A80300B0A9CA /* StatsViewController.m in Sources */,
+				887E6F5415253C81004DACFD /* DifficultyCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
