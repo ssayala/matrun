@@ -41,9 +41,11 @@
 @property (nonatomic, retain) IBOutlet UILabel *answerB;
 @property (nonatomic, retain) IBOutlet UILabel *answerC;
 @property (nonatomic, retain) IBOutlet UILabel *answerD;
+@property (readonly) NSInteger difficultySetting;
 -(void)resetStats;
 -(IBAction)showStats;
 -(IBAction)setNumbers;
+-(void)setLabelStyle:(UILabel*)label;
 -(UIFont *)getFont;
 -(UIFont *)getFont:(NSString*)fontName fontSize:(CGFloat)fontSize;
 -(NSInteger)doOperation:(NSInteger)topNumber bottomNumber:(NSInteger)bottom;
