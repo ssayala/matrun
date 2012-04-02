@@ -24,7 +24,7 @@
 @property (nonatomic, retain) NSArray *keys;
 @property (readonly) BOOL resetStatsPressed;
 @property (nonatomic, retain) id <StatsResetDelegate> delegate;
-- (void)dismissAction;
+- (IBAction)dismissAction;
 - (void)setCorrectAttemptCount:(NSInteger)count;
 - (void)setWrongAttemptCount:(NSInteger)count;
 - (void)setTotalCount:(NSInteger)count;
