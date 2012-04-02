@@ -8,8 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import "StatsResetDelegate.h"
-
-
+#import "DifficultyCell.h"
+#import "Digits.h"
 
 @interface StatsViewController : UIViewController 
 <UITableViewDelegate, UITableViewDataSource>{
@@ -23,11 +23,13 @@
 @property (nonatomic, retain) NSDictionary *information;
 @property (nonatomic, retain) NSArray *keys;
 @property (readonly) BOOL resetStatsPressed;
+@property (readonly) NSInteger diffSegmentIndex;
 @property (nonatomic, retain) id <StatsResetDelegate> delegate;
-- (void)dismissAction;
+- (IBAction)dismissAction;
 - (void)setCorrectAttemptCount:(NSInteger)count;
 - (void)setWrongAttemptCount:(NSInteger)count;
 - (void)setTotalCount:(NSInteger)count;
+- (void)setDifficulty:(NSInteger)setting;
 - (IBAction)resetScores;
 
 @end

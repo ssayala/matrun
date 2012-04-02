@@ -20,6 +20,8 @@
 
 #import <Foundation/Foundation.h>
 
+#define EASY 10
+#define HARD 100
 
 @interface Digits : NSObject {
     NSInteger top;
@@ -28,7 +30,11 @@
 }
 @property (readonly, nonatomic) NSInteger top;
 @property (readonly, nonatomic) NSInteger bottom;
+@property (nonatomic) NSInteger difficulty;
+
 -(void)reset;
--(id)initWithTopHigher;
+
+-(id)init:(NSInteger)setting;
+-(id)initWithTopHigher:(NSInteger)setting;
 
 @end
