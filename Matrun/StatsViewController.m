@@ -8,10 +8,10 @@
 
 #import "StatsViewController.h"
 
-
 @implementation StatsViewController
 @synthesize delegate;
 @synthesize resetStatsPressed;
+@synthesize diffSegmentIndex;
 @synthesize information;
 @synthesize keys;
 @synthesize table;
@@ -42,17 +42,27 @@
     total = count;
 }
 
+- (void)setDifficulty:(NSInteger)setting {
+    if(setting == EASY){
+        diffSegmentIndex = 0;
+    } else {
+        diffSegmentIndex = 1;
+    }
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     resetStatsPressed = NO;
    
     NSString *statsSectionTitle = [NSString stringWithFormat:@"%@ %@",self.sectionTitle, @"Stats"];
-    NSArray *sections = [[NSArray alloc] initWithObjects:statsSectionTitle, @"About", nil];
+    NSArray *sections = [[NSArray alloc] initWithObjects:statsSectionTitle, @"Settings", @"About", nil];
     NSArray *infoArray = [[NSArray alloc] initWithObjects:@"Total Questions", @"Wrong Attempts", nil];
+    NSArray *settingArray = [[NSArray alloc] initWithObjects:@"Difficulty", nil];
     NSArray *aboutArray = [[NSArray alloc] initWithObjects:@"Version", nil];
     
-    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:2];
+    NSMutableDictionary *dict = [[NSMutableDictionary alloc] initWithCapacity:3];
     [dict setObject:infoArray forKey:statsSectionTitle];
+    [dict setObject:settingArray forKey:@"Settings"];
     [dict setObject:aboutArray forKey:@"About"];
     self.information = dict;
     self.keys = sections;
@@ -105,7 +115,7 @@
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section {
     NSString *key = [keys objectAtIndex:section];
-    NSArray *nameSection = [information objectForKey:key];
+    NSArray *nameSection = [information objectForKey:key];    
     return [nameSection count];
 }
 
@@ -119,31 +129,59 @@
     NSArray *nameSection = [information objectForKey:key];
 	
     static NSString *SectionsTableIdentifier = @"SectionsTableIdentifier";
+    static NSString *DifficultyCellIdentifier = @"DifficultyCellIdentifier";
+    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
 							 SectionsTableIdentifier];
+    
+    DifficultyCell *diffCell = [tableView dequeueReusableCellWithIdentifier:DifficultyCellIdentifier];  
+    
     if (cell == nil) {
         cell = [[[UITableViewCell alloc]
 				 initWithStyle:UITableViewCellStyleValue1
 				 reuseIdentifier:SectionsTableIdentifier] autorelease];
     }
+    
+    if(diffCell == nil){
+        diffCell = [[[DifficultyCell alloc]
+				 initWithStyle:UITableViewCellStyleValue1
+				 reuseIdentifier:DifficultyCellIdentifier] autorelease];
+        [diffCell.diffSegment addTarget:self action:@selector(segmentAction:) forControlEvents:UIControlEventValueChanged];
+    }
 	
     cell.textLabel.text = [nameSection objectAtIndex:row];
-    if (section == 0) {
-        if (row == 0) {
-                                         
-            cell.detailTextLabel.text = [NSString stringWithFormat:@"%d",total];
-            cell.detailTextLabel.textAlignment = UITextAlignmentRight;
-        } 
-        else if (row == 1) {
-            cell.detailTextLabel.text = [NSString stringWithFormat:@"%d",wrongAttempts];
-        }
+    switch (section){
+        case 0:
+            if (row == 0) {
+                
+                cell.detailTextLabel.text = [NSString stringWithFormat:@"%d",total];
+                cell.detailTextLabel.textAlignment = UITextAlignmentRight;
+            } 
+            else if (row == 1) {
+                cell.detailTextLabel.text = [NSString stringWithFormat:@"%d",wrongAttempts];
+            }
+            break;
+        case 1:
+            if(row == 0){
+                [[diffCell diffSegment] setSelectedSegmentIndex:diffSegmentIndex];
+                return diffCell;
+            }
+            
+            break;
+        case 2:
+            if (row == 0) {
+                cell.detailTextLabel.text =  [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];;
+            }
+            break;
     }
-    if (section == 1) {
-        if (row == 0) {
-            cell.detailTextLabel.text =  [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"];;
-        }
-    }
+    
     return cell;
+}
+
+// handle event for difficulty change
+- (IBAction)segmentAction:(id)sender {
+    UISegmentedControl *segmentedControl = (UISegmentedControl *) sender;
+    diffSegmentIndex = segmentedControl.selectedSegmentIndex;
 }
 
 - (NSString *)tableView:(UITableView *)tableView
